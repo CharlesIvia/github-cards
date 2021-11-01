@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { Component } from "react";
 import CardList from "./components/CardList";
+import Form from "./components/Form";
 
 const testData = [
   {
@@ -32,6 +33,7 @@ export default class App extends Component {
     return (
       <div>
         <div className="header">GitHub Cards App</div>
+        <Form createProfile={this.addNewProfile} />
         <CardList profiles={this.state.profiles} />
       </div>
     );
